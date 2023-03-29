@@ -1,0 +1,26 @@
+@font-face {
+	font-family: Lato;
+	src: local("Lato"), local("Lato-Bold"), local("LatoBold"),
+		url("../fonts/Lato/Lato-Bold.woff2") format("woff2"),
+		url("../fonts/Lato/Lato-Bold.woff") format("woff");
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Lato;
+	src: local("Lato"), local("Lato-Regular"), local("LatoRegular"),
+		url("../fonts/Lato/Lato-Regular.woff2") format("woff2"),
+		url("../fonts/Lato/Lato-Regular.woff") format("woff");
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: local("Open Sans"), local("Open Sans-Bold"), local("Open SansBold"),
+		url("../fonts/Open_Sans/OpenSans-Bold.woff2") format("woff2"),
+		url("../fonts/Open_Sans/OpenSans-Bold.woff") format("woff");
+	font-weight: 700;
+	font-display: swap;
+}

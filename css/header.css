@@ -1,0 +1,297 @@
+.header {
+	padding: 27px 0 45px 0;
+}
+
+
+
+.header__container {
+	display: grid;
+	align-items: center;
+	justify-content: space-between;
+	grid-template-columns: 2fr 3fr 7fr 4fr;
+	grid-template-rows: 61px;
+	grid-template-areas: "logo button search nav";
+	gap: 0 15px;
+}
+
+.header__logo {
+	font-family: 'Open Sans';
+	font-size: 30px;
+	line-height: 1.36;
+	padding-top: 5px;
+	letter-spacing: 0.06em;
+	color: #2D2D2D;
+	grid-area: logo;
+}
+
+.header__logo_color_blue {
+	color: var(--color);
+}
+
+.header__button {
+	background-color: var(--color);
+	border: none;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 1.5;
+	color: #FFFFFF;
+	padding: 9px 32px 12px 28px;
+	position: relative;
+	border-radius: 10px;
+	grid-area: button;
+	max-width: 151px;
+	justify-self: center;
+}
+
+.header__button:before {
+	content: '';
+	display: inline-block;
+	background-image: url('../img/header/sort.svg');
+	background-repeat: no-repeat;
+	margin-right: 7px;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+
+.header__form {
+	display: grid;
+	grid-template-columns: 5fr 2fr;
+	grid-template-rows: 1fr;
+	max-width: 757px;
+	grid-area: search;
+	align-self: center;
+}
+
+.form {}
+
+.form__input {
+	background: #EFEFEF;
+	border-radius: 30px;
+	border: none;
+	font-size: 16px;
+	line-height: 1.3;
+	font-weight: 700;
+	padding: 17px 0 17px 40px;
+	color: #8F8F8F;
+	grid-column: 1 / 3;
+	grid-row: 1 / 2;
+}
+
+.form__button {
+	justify-self: end;
+	display: flex;
+	align-items: center;
+	background: #3670C7;
+	border: none;
+	border-radius: 30px;
+	padding: 0px 33px;
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+
+.header__nav {
+	grid-area: nav;
+	justify-content: space-between;
+	justify-self: end;
+	max-width: 354px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 70px;
+}
+
+.header__item {
+	text-align: center;
+	height: 61px;
+	padding-top: 3px;
+}
+
+.header__link {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px 0;
+}
+
+.header__item-icon {
+	width: 36px;
+	min-height: 36px;
+}
+
+.header__item-text {
+	font-size: 16px;
+	line-height: 1.3;
+	color: #2D2D2D;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:1440px) {
+	.header {
+		padding-top: 34px;
+		padding-bottom: 30px;
+	}
+
+	.header__container {
+		grid-template-columns: 3fr 5fr 4fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+			"logo logo nav"
+			"button search search";
+		column-gap: 10px;
+		row-gap: 29px;
+	}
+
+	.header__logo {
+		max-width: 190px;
+	}
+
+	.header__nav {
+		gap: 0 40px;
+	}
+
+	.header__button {
+		justify-self: start;
+
+	}
+
+	.header__nav {
+		column-gap: 40px;
+	}
+}
+
+@media screen and (max-width:980px) {
+	.header {
+		padding: 25px 0 20px;
+	}
+
+	.header__container {
+		grid-template-columns: 2fr 4fr 3fr;
+		row-gap: 0px;
+	}
+
+	.header__logo {
+		max-width: 165px;
+		font-size: 26px;
+		padding: 0 0 13px;
+	}
+
+	.header__nav {
+		gap: 0 30px;
+	}
+
+	.header__item-text {
+		font-size: 12px;
+	}
+
+	.header__button {
+		padding: 8px 22px 10px 21px;
+		font-size: 16px;
+		border-radius: 6px;
+		width: 115px;
+	}
+
+	.header__button:before {
+		margin-right: 4px;
+	}
+
+	.form__button {
+		padding: 0px 26px;
+	}
+
+	.header__link {
+		gap: 0;
+	}
+
+	.icon-search {
+		width: 30px;
+		height: 30px;
+	}
+
+	.header__item-icon {
+		width: 30px;
+		min-height: 30px;
+	}
+
+	.form__input {
+		font-size: 12px;
+		padding: 13px 0 13px 30px;
+	}
+
+	.header__nav {
+		align-self: flex-start;
+	}
+
+}
+
+@media screen and (max-width:650px) {
+	.header {
+		padding: 21px 0 14px;
+	}
+
+	.header__container {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-areas:
+			"logo ."
+			"button nav"
+			"search search";
+		align-items: self-end;
+		row-gap: 10px;
+	}
+
+	.header__logo {
+		font-size: 18px;
+	}
+
+	.text-hidden {
+		display: none;
+	}
+
+	.header__nav {
+		align-items: center;
+		gap: 20px;
+	}
+
+	.header__item {
+		height: 30px;
+		padding: 0;
+	}
+
+	.header__button {
+		padding: 7px 14px 7px 14px;
+		font-size: 12px;
+		border-radius: 4px;
+		max-width: 79px;
+		align-self: self-start;
+	}
+
+	.header__button:before {
+		margin-right: 2px;
+		width: 14px;
+		height: 14px;
+		background-size: contain;
+	}
+
+	.form__input {
+		padding: 7px 0 7px 16px;
+	}
+
+	.form__button {
+		padding: 0px 17px;
+	}
+
+	.icon-search {
+		width: 20px;
+		min-height: 20px;
+	}
+
+	.header__form {
+		align-self: self-end;
+	}
+}
