@@ -7,7 +7,7 @@
 	grid-template-areas:
 		"item-1 item-2 item-3"
 		"item-4 item-4 item-5";
-	grid-template-columns: 1fr 1fr minmax(340px, 1fr);
+	grid-template-columns: minmax(300px, 584px) minmax(400px, 516px) minmax(340px, 550px);
 	grid-template-rows: repeat(2, 516px);
 	gap: 60px;
 }
@@ -19,12 +19,11 @@
 }
 
 .cards__item-1 {
-	grid-template-columns: repeat(2, minmax(245px, 1fr));
+	grid-template-columns: repeat(2, minmax(150px, 245px));
 	grid-template-rows: repeat(2, minmax(245px, 1fr));
 	column-gap: 60px;
 	row-gap: 43px;
 	grid-area: item-1;
-	margin-right: 34px;
 }
 
 .cards__item-2 {
@@ -86,7 +85,7 @@
 .card-4 {
 	padding: 20px;
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%), url('../img/promo/second-pair.jpg') no-repeat center;
-	background-size: 107% 144%;
+	background-size: cover;
 	background-position-x: -7%;
 }
 
@@ -216,7 +215,7 @@
 			"item-1 item-2"
 			"item-3 item-5"
 			"item-4 item-4";
-		grid-template-columns: 1fr 446px;
+		grid-template-columns: 1fr minmax(330px, 1fr);
 		grid-template-rows: 446px 410px 450px;
 		gap: 22px 30px;
 	}
@@ -349,7 +348,7 @@
 	}
 
 	.promo__list {
-		grid-template-columns: 300px minmax(280px, 380px);
+		grid-template-columns: minmax(250px, 300px) minmax(280px, 380px);
 		grid-template-rows: repeat(12, 48px) 357px;
 		row-gap: 0px;
 		column-gap: 20px;
@@ -360,7 +359,7 @@
 	}
 
 	.cards__item-1 {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, minmax(100px, 1fr));
 		grid-template-rows: repeat(2, minmax(130px, 1fr));
 		row-gap: 22px;
 		column-gap: 34px;

@@ -91,13 +91,14 @@
 }
 
 .header__nav {
-	grid-area: nav;
-	justify-content: space-between;
-	justify-self: end;
-	max-width: 354px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 70px;
+	gap: 65px;
+	justify-self: end;
+	justify-content: space-between;
+	grid-area: nav;
+	max-width: 354px;
+	justify-items: center;
 }
 
 .header__item {
@@ -111,7 +112,7 @@
 	height: 100%;
 	flex-direction: column;
 	align-items: center;
-	gap: 4px 0;
+	gap: 3px 0;
 }
 
 .header__item-icon {
@@ -152,7 +153,9 @@
 	}
 
 	.header__nav {
-		gap: 0 40px;
+		justify-self: self-end;
+		max-width: 294px;
+		column-gap: 35px;
 	}
 
 	.header__button {
@@ -160,9 +163,6 @@
 
 	}
 
-	.header__nav {
-		column-gap: 40px;
-	}
 }
 
 @media screen and (max-width:980px) {
@@ -182,7 +182,8 @@
 	}
 
 	.header__nav {
-		gap: 0 30px;
+		max-width: 221px;
+		gap: 0 25px;
 	}
 
 	.header__item-text {
@@ -231,21 +232,22 @@
 
 @media screen and (max-width:650px) {
 	.header {
-		padding: 21px 0 14px;
+		padding: 21px 0 20px;
 	}
 
 	.header__container {
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-rows: 25px 30px 1fr;
 		grid-template-areas:
 			"logo ."
 			"button nav"
 			"search search";
 		align-items: self-end;
-		row-gap: 10px;
+		row-gap: 20px;
 	}
 
 	.header__logo {
+		padding-bottom: 0;
 		font-size: 18px;
 	}
 
@@ -279,11 +281,12 @@
 	}
 
 	.form__input {
+		font-size: 8px;
 		padding: 7px 0 7px 16px;
 	}
 
 	.form__button {
-		padding: 0px 17px;
+		padding: 0px 15px;
 	}
 
 	.icon-search {
@@ -292,6 +295,6 @@
 	}
 
 	.header__form {
-		align-self: self-end;
+		align-self: self-start;
 	}
 }

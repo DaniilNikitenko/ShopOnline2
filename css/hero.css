@@ -56,6 +56,9 @@
 	.hero__container {
 		padding-top: 80px;
 		padding-bottom: 36px;
+		background-size: cover;
+		height: 314px;
+		border-radius: 16px;
 
 	}
 
@@ -123,6 +126,8 @@
 	.hero__container {
 		height: 340px;
 		padding: 50px 25px 30px;
+		border-radius: 8px;
+		background-position: center;
 
 	}
 
